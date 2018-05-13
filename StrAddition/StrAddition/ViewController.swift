@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBAction func calculate(_ sender: Any) {
-        resultLabel.text = strAddition(str1 : num1.text!, str2 : num2.text!)
+        resultLabel.text = self.strAddition(str1 : num1.text!, str2 : num2.text!)
     }
     
     
@@ -33,8 +33,8 @@ class ViewController: UIViewController {
     
     func strAddition(str1:String, str2:String) -> String {
         // assuming + sign does not work but += sign does work!!!
-        var res:UInt32 = strToNum(str: str1)
-        res += strToNum(str: str2)
+        var res:UInt32 = self.strToNum(str: str1)
+        res += self.strToNum(str: str2)
         return String(res)
     }
     
